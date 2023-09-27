@@ -1,14 +1,11 @@
 import { TypeAnimation } from "react-type-animation";
-import { Overpass_Mono } from "next/font/google";
 import Image from "next/image";
 import benImage from "../public/ben-image.png";
-
-const overpass = Overpass_Mono({ subsets: ["latin"] });
 
 export default function Home() {
   return (
     <main
-      className={`flex  min-h-screen flex-col items-center p-24 font ${overpass.className}`}
+      className={'flex  min-h-screen flex-col items-center p-24 font'}
     >
       <div className="border-b-2 border-sky-600 p-5">
         <Image
@@ -33,8 +30,8 @@ export default function Home() {
           ]}
           wrapper="span"
           cursor="true"
-          className={overpass.className}
           speed={50}
+          className="font-overpass"
           style={{
             fontSize: "2em",
             color: "black",
