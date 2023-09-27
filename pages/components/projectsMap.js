@@ -18,6 +18,20 @@ const projectsMap = [
         website: "https://youngyodaproject.netlify.app/",
         code: "https://github.com/benroasting/BabyYoda_Project"
     },
+    {
+        src: "/DET030.png",
+        title: "Det 030 Website",
+        description: "First website I ever built ... taught myself HTML & CSS",
+        stack: "HTML, CSS",
+        code: "https://github.com/benroasting/Det030_Website_2013"
+    },
+    {
+        src: "/Veggie_Tender.png",
+        title: "Veggie Tender - Final Project",
+        description: "Final project for coding bootcamp. Farmer's market app.",
+        stack: "Javascript, React, Node",
+        code: "https://github.com/benroasting/team-gigasowers-frontend"
+    },
 ]
 
 export default projectsMap

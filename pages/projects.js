@@ -9,11 +9,11 @@ function projects() {
         <div className='flex p-5'>
         {projectsMap.map((project) => (
         
-            <div key={project.title} class="w-1/4 rounded-lg shadow-xl bg-white m-5">
+            <div key={project.title} className="w-1/4 rounded-lg shadow-xl bg-white m-5">
                 <img
                     src={project.src}
                     alt=""
-                    class="rounded-t-lg h-60 w-full object-cover"
+                    className="rounded-t-lg h-60 w-full object-cover"
                 />
             <div className="p-6">
               <h5
