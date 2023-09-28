@@ -5,14 +5,14 @@ function contact() {
   return (
     <div className="flex min-h-screen flex-col items-center p-12 font-overpass">
 
-            <h1 className="text-4xl font-bold mb-3">Contact</h1>
+            <h1 className="text-4xl font-bold mb-5 border-b-2 border-sky-600 pb-3">Contact</h1>
             <div>
-                <div className="flex flex-col mb-5 border-b-2 border-sky-600 pb-5">
+                <div className="flex flex-col mb-5 border-b-2 border-gray-300 pb-5">
                     <p className="text-2xl font-bold ">Ben Young</p>
                     <p className="text-lg">Software Engineer</p>
                     <p className="text-lg">... currently in Nashville, TN</p>
                 </div>
-                <div className="mb-5 border-b-2 border-sky-600 pb-5">
+                <div className="mb-5 border-b-2 border-gray-300 pb-5">
                     <p className="text-lg">developing.ben@gmail.com</p>
                     <p className="text-lg">501.548.5087</p>
                 </div>

@@ -3,12 +3,12 @@ import wouldYouRather from "../../public/would-you-rather.png";
 
 const projectsMap = [
   {
-    src: "/ramsey-plus-benefits.png",
-    title: "Ramsey Plus Benefits Screen",
+    src: "/EveryDollarCarousel.png",
+    title: "EveryDollar Budgeting Carousel",
     description:
-      "Built a member benefits table to show feature comparisons between subscriptions.",
-    stack: ["Javascript", "Ruby on Rails"],
-    website: "https://www.ramseysolutions.com/ramseyplus",
+      "Built as a user experiment to see if an image carousel would help with premium account activation.",
+    stack: ["CSharp", "Xamarin"],
+    website: "https://apps.apple.com/us/app/everydollar-budget-your-money/id942571931",
   },
   {
     src: "/baby-yoda-project.png",
@@ -49,6 +49,14 @@ const projectsMap = [
     stack: ["Javascript", "React"],
     website: "https://would-you-rather-questions.netlify.app/",
     code: "https://github.com/benroasting/would-you-rather",
+  },
+  {
+    src: "/ramsey-plus-benefits.png",
+    title: "Ramsey Plus Benefits Screen",
+    description:
+      "Built a member benefits table to show feature comparisons between subscriptions.",
+    stack: ["Javascript", "Ruby on Rails"],
+    website: "https://www.ramseysolutions.com/ramseyplus",
   },
 ];
 
