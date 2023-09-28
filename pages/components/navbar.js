@@ -3,8 +3,8 @@ import React from "react";
 
 function Navbar() {
   return (
-    <div className="m-5">
-      <ul className="flex justify-center font-overpass">
+    <div className="m-5 font-overpass">
+      <ul className="flex justify-center">
         <li className="p-3">
           <Link className="p-2 px-5 rounded-md bg-gray-400" href="/">Home</Link>
         </li>

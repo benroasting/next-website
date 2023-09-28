@@ -5,7 +5,7 @@ import benImage from "../public/ben-image.png";
 export default function Home() {
   return (
     <main
-      className={'flex  min-h-screen flex-col items-center p-24 font'}
+      className={'flex  min-h-screen flex-col items-center px-24 py-12 font'}
     >
       <div className="border-b-2 border-sky-600 p-5">
         <Image
