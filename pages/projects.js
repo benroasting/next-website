@@ -6,6 +6,7 @@ const projectsMap = [
     {
       src: "/EveryDollarCarousel.png",
       title: "EveryDollar Budgeting Carousel",
+      slug: "everydollar-budgeting-carousel",
       description:
         "Built as a user experiment to see if an image carousel would help with premium account activation.",
       stack: ["CSharp", "Xamarin"],
@@ -14,6 +15,7 @@ const projectsMap = [
     {
       src: "/baby-yoda-project.png",
       title: "Baby Yoda Project",
+      slug: "baby-yoda-project",
       description:
         "Built a SPA about Baby Yoda, from the Mandalorian, as a take-home project for a job application.",
       stack: ["Javascript"],
@@ -23,6 +25,7 @@ const projectsMap = [
     {
       src: "/ClassFinderResults.png",
       title: "Financial Peace Class Finder",
+      slug: "fpu-class-finder",
       description:
         "Improved the class finder design and experience for users to be able to better find FPU classes.",
       stack: ["Javascript", "React", "Java"],
@@ -31,6 +34,7 @@ const projectsMap = [
     {
       src: "/DET030.png",
       title: "Det 030 Website",
+      slug: "det030-website",
       description: "First website I ever built ... taught myself HTML & CSS. Static site, but helped with recruiting candidates.",
       stack: ["HTML", "CSS"],
       code: "https://github.com/benroasting/Det030_Website_2013",
@@ -38,6 +42,7 @@ const projectsMap = [
     {
       src: "/Veggie_Tender.png",
       title: "Veggie Tender - Final Project",
+      slug: "veggie-tender-project",
       description: "Final project for coding bootcamp. Allowing users to find local farmers and connect with them.",
       stack: ["Javascript", "React", "Node"],
       code: "https://github.com/benroasting/team-gigasowers-frontend",
@@ -45,6 +50,7 @@ const projectsMap = [
     {
       src: "/would-you-rather.png",
       title: "Would You Rather",
+      slug: "would-you-rather",
       description:
         "Built and deployed so friends could filter and search for 'would you rather' questions.",
       stack: ["Javascript", "React"],
@@ -54,6 +60,7 @@ const projectsMap = [
     {
       src: "/ramsey-plus-benefits.png",
       title: "Ramsey Plus Benefits Screen",
+      slug: "rplus-benefits",
       description:
         "Built a member benefits table to show feature comparisons between subscriptions.",
       stack: ["Javascript", "Ruby on Rails"],
@@ -66,9 +73,16 @@ function projects() {
     <div className="flex min-h-screen flex-col items-center p-12">
       <h1 className="text-4xl font-bold font-overpass">Projects</h1>
       <div className="flex flex-wrap p-5">
+        <ul>
         {projectsMap.map((project) => (
+          <li key={project.title}>
+            <Link
+            href={{
+              pathname: '/projects/[slug]',
+              query: { slug: project.slug },
+            }}
+            >
           <div
-            key={project.title}
             className="w-[25rem] rounded-lg shadow-xl bg-white m-5"
           >
             <img
@@ -111,7 +125,10 @@ function projects() {
               </div>
             </div>
           </div>
+          </Link>
+          </li>
         ))}
+        </ul>
       </div>
     </div>
   );
