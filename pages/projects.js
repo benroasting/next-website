@@ -23,6 +23,15 @@ const projectsMap = [
       code: "https://github.com/benroasting/BabyYoda_Project",
     },
     {
+      src: "/Veterans-Form.png",
+      title: "Free FPU for Veterans",
+      slug: "fpu-for-veterans",
+      description:
+        "Created a flow for veterans to claim a free year of financial peace university.",
+      stack: ["Javascript", "React", "Java", "Segment"],
+      website: "https://www.ramseysolutions.com/veterans",
+    },
+    {
       src: "/ClassFinderResults.png",
       title: "Financial Peace Class Finder",
       slug: "fpu-class-finder",
