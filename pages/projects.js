@@ -4,6 +4,24 @@ import Link from "next/link";
 
 const projectsMap = [
     {
+      src: "/Veterans-Form.png",
+      title: "Free FPU for Veterans",
+      slug: "fpu-for-veterans",
+      description:
+        "Created a flow for veterans to claim a free year of financial peace university.",
+      stack: ["Javascript", "React", "Java", "Segment"],
+      website: "https://www.ramseysolutions.com/veterans",
+    },
+    {
+      src: "/ramsey-plus-benefits.png",
+      title: "Ramsey Plus Benefits Screen",
+      slug: "rplus-benefits",
+      description:
+        "Built a member benefits table to show feature comparisons between subscriptions.",
+      stack: ["Javascript", "Ruby on Rails"],
+      website: "https://www.ramseysolutions.com/ramseyplus",
+    },
+    {
       src: "/EveryDollarCarousel.png",
       title: "EveryDollar Budgeting Carousel",
       slug: "everydollar-budgeting-carousel",
@@ -21,15 +39,6 @@ const projectsMap = [
       stack: ["Javascript"],
       website: "https://youngyodaproject.netlify.app/",
       code: "https://github.com/benroasting/BabyYoda_Project",
-    },
-    {
-      src: "/Veterans-Form.png",
-      title: "Free FPU for Veterans",
-      slug: "fpu-for-veterans",
-      description:
-        "Created a flow for veterans to claim a free year of financial peace university.",
-      stack: ["Javascript", "React", "Java", "Segment"],
-      website: "https://www.ramseysolutions.com/veterans",
     },
     {
       src: "/ClassFinderResults.png",
@@ -65,15 +74,6 @@ const projectsMap = [
       stack: ["Javascript", "React"],
       website: "https://would-you-rather-questions.netlify.app/",
       code: "https://github.com/benroasting/would-you-rather",
-    },
-    {
-      src: "/ramsey-plus-benefits.png",
-      title: "Ramsey Plus Benefits Screen",
-      slug: "rplus-benefits",
-      description:
-        "Built a member benefits table to show feature comparisons between subscriptions.",
-      stack: ["Javascript", "Ruby on Rails"],
-      website: "https://www.ramseysolutions.com/ramseyplus",
     },
   ];
 
