@@ -84,13 +84,7 @@ function projects() {
       <div className="flex flex-wrap p-5">
         <ul>
         {projectsMap.map((project) => (
-          <li key={project.title}>
-            <Link
-            href={{
-              pathname: '/projects/[slug]',
-              query: { slug: project.slug },
-            }}
-            >
+         <>
           <div
             className="w-[25rem] rounded-lg shadow-xl bg-white m-5"
           >
@@ -134,8 +128,7 @@ function projects() {
               </div>
             </div>
           </div>
-          </Link>
-          </li>
+          </>
         ))}
         </ul>
       </div>
