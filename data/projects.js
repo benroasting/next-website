@@ -2,6 +2,24 @@
 // Omit `website` / `code` for private or unreleased work; buttons only render when present.
 export const projects = [
 {
+  src: "/Prophit.png",
+  title: "Prophit",
+  slug: "prophit",
+  description:
+    "Mobile app that helps beginner investors discover companies tied to trends they notice. Built the onboarding flow, discover and search screens, and portfolio swipe experience as part of a small contract team.",
+  stack: ["React Native", "Expo", "TypeScript", "React Query", "Firebase"],
+  website: "https://apps.apple.com/us/app/prophit/id6751884644",
+},
+{
+  src: "/EveryDollar-Forms-BFF.png",
+  title: "EveryDollar Forms BFF",
+  slug: "everydollar-forms-bff",
+  description:
+    "Built a backend-for-frontend service that serves React forms into CMS-managed marketing pages, like the Budgeting 101 workshop signup, so engineers can update forms without touching the CMS.",
+  stack: ["Java", "Spring Boot", "React", "TypeScript", "Redis"],
+  website: "https://www.ramseysolutions.com/money/everydollar/intro-to-everydollar",
+},
+{
   src: "/Veterans-Form.png",
   title: "Free FPU for Veterans",
   slug: "fpu-for-veterans",

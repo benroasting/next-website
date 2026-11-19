@@ -42,14 +42,16 @@ function Projects() {
               <p className="mb-2 text-sm text-neutral-600">
                 {project.description}
               </p>
-              {project.stack.map((tech) => (
-                <span
-                  key={tech}
-                  className="m-1 px-2 text-sm bg-slate-400 rounded-lg text-white uppercase justify-center"
-                >
-                  {tech}
-                </span>
-              ))}
+              <div className="flex flex-wrap gap-2">
+                {project.stack.map((tech) => (
+                  <span
+                    key={tech}
+                    className="px-2 py-0.5 text-sm bg-slate-400 rounded-lg text-white uppercase whitespace-nowrap"
+                  >
+                    {tech}
+                  </span>
+                ))}
+              </div>
               <div className="flex justify-between items-center">
                 {hasCaseStudy(project) && (
                   <Link

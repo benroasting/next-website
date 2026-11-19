@@ -31,11 +31,11 @@ function ProjectScreen({ project }) {
         <h1 className="text-4xl font-bold mt-4 mb-2">{title}</h1>
         {role && <p className="text-sm text-neutral-600 mb-4">{role}</p>}
         <p className="text-lg mb-4">{description}</p>
-        <div className="mb-6">
+        <div className="mb-6 flex flex-wrap gap-2">
           {stack.map((tech) => (
             <span
               key={tech}
-              className="mr-2 px-2 text-sm bg-slate-400 rounded-lg text-white uppercase"
+              className="px-2 py-0.5 text-sm bg-slate-400 rounded-lg text-white uppercase whitespace-nowrap"
             >
               {tech}
             </span>
