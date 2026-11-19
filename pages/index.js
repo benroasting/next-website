@@ -14,7 +14,7 @@ export default function Home() {
         priority
       />
       <div className="w-full max-w-xl text-center md:w-[32rem] md:text-left">
-        <p className="mb-3 text-sm font-bold text-brick">// hello, world</p>
+        <p className="mb-3 text-sm font-bold text-brick">{"// hello, world"}</p>
         <h1 className="retro-title mb-4 leading-none">Ben Young</h1>
         <div className="h-[7rem] text-xl">
           <span className="text-brick">&gt; </span>
