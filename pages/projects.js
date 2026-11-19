@@ -11,7 +11,7 @@ function Projects() {
         {projects.map((project) => {
           const img = (
             <img
-              src={project.src}
+              src={project.cardSrc || project.src}
               alt={`${project.title} screenshot`}
               className="h-60 w-full border-b-[3px] border-ink object-cover object-top sepia-[.3] saturate-[1.1]"
             />
