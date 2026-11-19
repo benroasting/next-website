@@ -4,42 +4,36 @@ import benImage from "../public/ben-image.png";
 
 export default function Home() {
   return (
-    <main
-      className={'flex  min-h-screen flex-col items-center px-24 py-12 font'}
-    >
-      <div className="border-b-2 border-sky-600 p-5">
-        <Image
-          className="drop-shadow-lg rounded-full filter grayscale"
-          height={250}
-          width={250}
-          src={benImage}
-          alt=""
-        />
+    <div className="flex flex-col items-center gap-8 p-12 md:flex-row md:justify-center md:gap-14">
+      <Image
+        className="h-[220px] w-[220px] rounded-full border-4 border-ink object-cover shadow-retro-lg sepia-[.5]"
+        height={250}
+        width={250}
+        src={benImage}
+        alt="Ben Young"
+        priority
+      />
+      <div className="w-full max-w-xl text-center md:w-[32rem] md:text-left">
+        <p className="mb-3 text-sm font-bold text-brick">{"// hello, world"}</p>
+        <h1 className="retro-title mb-4 leading-none">Ben Young</h1>
+        <div className="h-[7rem] text-xl">
+          <span className="text-brick">&gt; </span>
+          <TypeAnimation
+            sequence={[
+              "Hi, my name is Ben Young",
+              2000,
+              "I am a Software Engineer.",
+              2000,
+              "I want to improve the lives of others through my actions and my code.",
+              2000,
+            ]}
+            wrapper="span"
+            cursor={true}
+            speed={50}
+            repeat={Infinity}
+          />
+        </div>
       </div>
-
-      <div className="p-5">
-        <TypeAnimation
-          sequence={[
-            // Same substring at the start will only be typed out once, initially
-            "Hi, My name is Ben Young",
-            2000, // wait 1s before replacing "Mice" with "Hamsters"
-            "I am a Software Engineer.",
-            2000,
-            "I want to improve the lives of others through my actions and my code.",
-            2000,
-          ]}
-          wrapper="span"
-          cursor="true"
-          speed={50}
-          className="font-overpass"
-          style={{
-            fontSize: "2em",
-            color: "black",
-            display: "inline-block",
-          }}
-          repeat={Infinity}
-        />
-      </div>
-    </main>
+    </div>
   );
 }

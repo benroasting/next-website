@@ -1,24 +1,39 @@
 import Link from "next/link";
+import { useRouter } from "next/router";
 import React from "react";
 
+const links = [
+  { href: "/", label: "Home", color: "bg-mustard" },
+  { href: "/about", label: "About", color: "bg-tangerine" },
+  { href: "/projects", label: "Projects", color: "bg-olive text-paper" },
+  { href: "/contact", label: "Contact", color: "bg-brick text-paper" },
+];
+
 function Navbar() {
+  const { pathname } = useRouter();
   return (
-    <div className="m-5 font-overpass">
-      <ul className="flex justify-center">
-        <li className="p-3">
-          <Link className="p-2 px-5 rounded-md bg-gray-400" href="/">Home</Link>
-        </li>
-        <li className="p-3">
-          <Link className="p-2 px-5 rounded-md bg-amber-300" href="/about">About</Link>
-        </li>
-        <li className="p-3">
-          <Link className="p-2 px-5 rounded-md bg-teal-500" href="/projects">Projects</Link>
-        </li>
-        <li className="p-3">
-          <Link className="p-2 px-5 rounded-md bg-red-400" href="/contact">Contact</Link>
-        </li>
+    <nav className="px-5 pt-8 pb-4 font-overpass">
+      <p className="mb-4 hidden text-center text-sm text-brick sm:block">
+        ben@portfolio:~$ <span className="cursor" />
+      </p>
+      <ul className="flex flex-wrap justify-center gap-3">
+        {links.map(({ href, label, color }) => {
+          const active = href === "/" ? pathname === "/" : pathname.startsWith(href);
+          return (
+            <li key={href}>
+              <Link
+                href={href}
+                className={`retro-btn rounded-full px-5 text-sm normal-case ${color} ${
+                  active ? "translate-x-[2px] translate-y-[2px] shadow-retro-sm-hover" : ""
+                }`}
+              >
+                {active ? `> ${label}` : label}
+              </Link>
+            </li>
+          );
+        })}
       </ul>
-    </div>
+    </nav>
   );
 }
 

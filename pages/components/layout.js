@@ -1,5 +1,11 @@
 //fonts
-import { Overpass_Mono, Inclusive_Sans } from "next/font/google";
+import { Overpass_Mono, Fraunces } from "next/font/google";
+
+export const fraunces = Fraunces({
+  subsets: ["latin"],
+  weight: ["600", "900"],
+  variable: "--font-fraunces",
+});
 
 //components
 import Navbar from "./navbar";
@@ -11,7 +17,7 @@ export const overpass = Overpass_Mono({
 
 const Layout = ({ children }) => {
   return (
-    <div className={`${overpass.variable}`}>
+    <div className={`${overpass.variable} ${fraunces.variable} font-overpass`}>
       <Navbar />
       <main>{children}</main>
     </div>

@@ -1,18 +1,30 @@
-import React from 'react'
+import React from "react";
 
-function about() {
+function About() {
   return (
-    <div className="flex min-h-screen flex-col items-center p-12 font-overpass">
-
-        <h1 className="text-4xl font-bold mb-5 border-b-2 border-sky-600 pb-3">About Me</h1>
-            <div className="flex flex-col mb-5">
-                <p className="text-lg mb-5">I am a bridge-builder, connector, and communicator.</p>
-                <p className="text-lg mb-5">I am a servant leader who truly cares about people <br/> and fosters a culture of trust, honor, and love.</p>
-                <p className="text-lg">I love to learn and seek to extend my skillset <br/> with new languages and frameworks.</p>
-                
-            </div>
+    <div className="flex min-h-screen flex-col items-center p-12">
+      <h1 className="retro-title mb-8">About Me</h1>
+      <div className="max-w-xl rounded-xl border-[3px] border-ink bg-card shadow-retro-lg">
+        <div className="flex items-center gap-2 rounded-t-[9px] border-b-[3px] border-ink bg-mustard px-3 py-1.5 text-xs font-bold text-onaccent">
+          <span className="h-3 w-3 rounded-full border-2 border-ink bg-tangerine" />
+          <span className="h-3 w-3 rounded-full border-2 border-ink bg-paper" />
+          <span className="h-3 w-3 rounded-full border-2 border-ink bg-olive" />
+          <span className="ml-2">~/about.txt</span>
+        </div>
+        <div className="space-y-5 p-8 text-lg leading-relaxed">
+          <p>I am a bridge-builder, connector, and communicator.</p>
+          <p>
+            I am a servant leader who truly cares about people and fosters a
+            culture of trust, honor, and love.
+          </p>
+          <p>
+            I love to learn and seek to extend my skillset with new languages
+            and frameworks.
+          </p>
+        </div>
+      </div>
     </div>
-  )
+  );
 }
 
-export default about
+export default About;

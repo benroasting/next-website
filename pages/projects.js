@@ -1,139 +1,79 @@
 import React from "react";
-import Image from "next/image";
 import Link from "next/link";
+import { projects } from "../data/projects";
 
-const projectsMap = [
-    {
-      src: "/Veterans-Form.png",
-      title: "Free FPU for Veterans",
-      slug: "fpu-for-veterans",
-      description:
-        "Created a flow for veterans to claim a free year of financial peace university.",
-      stack: ["Javascript", "React", "Java", "Segment"],
-      website: "https://www.ramseysolutions.com/veterans",
-    },
-    {
-      src: "/ramsey-plus-benefits.png",
-      title: "Ramsey Plus Benefits Screen",
-      slug: "rplus-benefits",
-      description:
-        "Built a member benefits table to show feature comparisons between subscriptions.",
-      stack: ["Javascript", "Ruby on Rails"],
-      website: "https://www.ramseysolutions.com/ramseyplus",
-    },
-    {
-      src: "/EveryDollarCarousel.png",
-      title: "EveryDollar Budgeting Carousel",
-      slug: "everydollar-budgeting-carousel",
-      description:
-        "Built as a user experiment to see if an image carousel would help with premium account activation.",
-      stack: ["CSharp", "Xamarin"],
-      website: "https://apps.apple.com/us/app/everydollar-budget-your-money/id942571931",
-    },
-    {
-      src: "/baby-yoda-project.png",
-      title: "Baby Yoda Project",
-      slug: "baby-yoda-project",
-      description:
-        "Built a SPA about Baby Yoda, from the Mandalorian, as a take-home project for a job application.",
-      stack: ["Javascript"],
-      website: "https://youngyodaproject.netlify.app/",
-      code: "https://github.com/benroasting/BabyYoda_Project",
-    },
-    {
-      src: "/ClassFinderResults.png",
-      title: "Financial Peace Class Finder",
-      slug: "fpu-class-finder",
-      description:
-        "Improved the class finder design and experience for users to be able to better find FPU classes.",
-      stack: ["Javascript", "React", "Java"],
-      website: "https://www.financialpeace.com/app/classes/guide",
-    },
-    {
-      src: "/DET030.png",
-      title: "Det 030 Website",
-      slug: "det030-website",
-      description: "First website I ever built ... taught myself HTML & CSS. Static site, but helped with recruiting candidates.",
-      stack: ["HTML", "CSS"],
-      code: "https://github.com/benroasting/Det030_Website_2013",
-    },
-    {
-      src: "/Veggie_Tender.png",
-      title: "Veggie Tender - Final Project",
-      slug: "veggie-tender-project",
-      description: "Final project for coding bootcamp. Allowing users to find local farmers and connect with them.",
-      stack: ["Javascript", "React", "Node"],
-      code: "https://github.com/benroasting/team-gigasowers-frontend",
-    },
-    {
-      src: "/would-you-rather.png",
-      title: "Would You Rather",
-      slug: "would-you-rather",
-      description:
-        "Built and deployed so friends could filter and search for 'would you rather' questions.",
-      stack: ["Javascript", "React"],
-      website: "https://would-you-rather-questions.netlify.app/",
-      code: "https://github.com/benroasting/would-you-rather",
-    },
-  ];
-
-function projects() {
+function Projects() {
   return (
-    <div className="flex min-h-screen flex-col items-center p-12">
-      <h1 className="text-4xl font-bold font-overpass">Projects</h1>
-      <div className="flex flex-wrap p-5">
-        <ul>
-        {projectsMap.map((project) => (
-         <>
-          <div
-            className="w-[25rem] rounded-lg shadow-xl bg-white m-5"
-          >
+    <div className="flex min-h-screen flex-col items-center px-6 py-12">
+      <h1 className="retro-title">Projects</h1>
+      <p className="mt-2 text-brick">$ ls ~/projects</p>
+      <ul className="mt-10 grid w-full max-w-6xl grid-cols-1 justify-items-center gap-10 md:grid-cols-2 lg:grid-cols-3">
+        {projects.map((project) => {
+          const img = (
             <img
               src={project.src}
-              alt=""
-              className="rounded-t-lg h-60 w-full object-cover border-b-2 border-gray-300"
+              alt={`${project.title} screenshot`}
+              className="h-60 w-full border-b-[3px] border-ink object-cover object-top sepia-[.3] saturate-[1.1]"
             />
-            <div className="px-6 pt-6 items-center">
-              <h5 className="mb-2 text-xl font-medium leading-tight text-neutral-800 dark:text-neutral-50">
-                {project.title}
-              </h5>
-              <p className="mb-2 text-sm text-neutral-600 dark:text-neutral-200">
-                {project.description}
-              </p>
-              {project.stack.map((tech) => (
-                <span
-                  key={project.stack[tech]}
-                  className="m-1 px-2 text-sm bg-slate-400 rounded-lg text-white uppercase justify-center"
-                >
-                  {tech}
-                </span>
-              ))}
-              <div className="flex justify-between ">
-                {project.code? <Link
-                  href={project.code}
-                  type="button"
-                  className="font-overpass my-3 p-2 px-4 rounded-md bg-amber-300 inline-block text-xs font-medium uppercase text-black"
-                > 
-                  Code
-                </Link> : <Link href=""></Link>}
-                {project.website ? (
-                  <Link
-                    href={project.website}
-                    type="button"
-                    className="font-overpass my-3 py-2 px-4 rounded-md bg-teal-500 inline-block text-xs font-medium uppercase text-black"
-                  >
-                    View Live
-                  </Link>
-                ) : <Link href=""></Link>}
+          );
+          return (
+            <li
+              key={project.slug}
+              className="flex w-full max-w-[25rem] list-none flex-col rounded-xl border-[3px] border-ink bg-card shadow-retro-lg"
+            >
+              <div className="flex items-center gap-2 rounded-t-[9px] border-b-[3px] border-ink bg-mustard px-3 py-1.5 text-xs font-bold text-onaccent">
+                <span className="h-3 w-3 rounded-full border-2 border-ink bg-tangerine" />
+                <span className="h-3 w-3 rounded-full border-2 border-ink bg-paper" />
+                <span className="h-3 w-3 rounded-full border-2 border-ink bg-olive" />
+                <span className="ml-2 truncate">~/projects/{project.slug}</span>
               </div>
-            </div>
-          </div>
-          </>
-        ))}
-        </ul>
-      </div>
+              <Link href={`/projects/${project.slug}`}>{img}</Link>
+              <div className="flex flex-1 flex-col p-5">
+                <h2 className="mb-2 font-display text-2xl font-black leading-tight">
+                  <Link href={`/projects/${project.slug}`}>{project.title}</Link>
+                </h2>
+                <p className="mb-3 flex-1 text-sm leading-relaxed">
+                  {project.description}
+                </p>
+                <div className="flex flex-wrap gap-2">
+                  {project.stack.map((tech) => (
+                    <span key={tech} className="retro-tag">
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+                <div className="mt-4 flex flex-wrap gap-3">
+                  <Link href={`/projects/${project.slug}`} className="retro-btn bg-paper">
+                    Details
+                  </Link>
+                  {project.code && (
+                    <a
+                      href={project.code}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="retro-btn bg-mustard"
+                    >
+                      Code
+                    </a>
+                  )}
+                  {project.website && (
+                    <a
+                      href={project.website}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="retro-btn bg-tangerine"
+                    >
+                      View Live
+                    </a>
+                  )}
+                </div>
+              </div>
+            </li>
+          );
+        })}
+      </ul>
     </div>
   );
 }
 
-export default projects;
+export default Projects;
