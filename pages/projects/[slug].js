@@ -2,14 +2,11 @@ import React from "react";
 import Link from "next/link";
 import { projects, getProject } from "../../data/projects";
 
-const linkBase =
-  "font-overpass py-2 px-4 rounded-md inline-block text-xs font-medium uppercase text-black";
-
 function Section({ title, children }) {
   if (!children) return null;
   return (
     <section className="mb-6">
-      <h2 className="text-xl font-bold mb-2 border-b-2 border-sky-600 pb-1">
+      <h2 className="mb-2 border-b-[3px] border-ink pb-1 font-display text-2xl font-black text-brick">
         {title}
       </h2>
       <p className="text-base leading-relaxed">{children}</p>
@@ -23,20 +20,17 @@ function ProjectScreen({ project }) {
     project;
 
   return (
-    <div className="flex min-h-screen flex-col items-center p-12 font-overpass">
+    <div className="flex min-h-screen flex-col items-center p-12">
       <div className="w-full max-w-3xl">
-        <Link href="/projects" className="text-sm underline">
-          &larr; All projects
+        <Link href="/projects" className="text-sm underline decoration-2 underline-offset-4">
+          &larr; cd ..
         </Link>
-        <h1 className="text-4xl font-bold mt-4 mb-2">{title}</h1>
-        {role && <p className="text-sm text-neutral-600 mb-4">{role}</p>}
-        <p className="text-lg mb-4">{description}</p>
+        <h1 className="retro-title mb-2 mt-4">{title}</h1>
+        {role && <p className="mb-4 text-sm text-brick">{role}</p>}
+        <p className="mb-4 text-lg">{description}</p>
         <div className="mb-6 flex flex-wrap gap-2">
           {stack.map((tech) => (
-            <span
-              key={tech}
-              className="px-2 py-0.5 text-sm bg-slate-400 rounded-lg text-white uppercase whitespace-nowrap"
-            >
+            <span key={tech} className="retro-tag">
               {tech}
             </span>
           ))}
@@ -44,29 +38,29 @@ function ProjectScreen({ project }) {
         <img
           src={src}
           alt={`${title} screenshot`}
-          className="rounded-lg shadow-xl w-full mb-8"
+          className="mx-auto mb-8 block max-h-[32rem] w-auto max-w-full rounded-xl border-[3px] border-ink shadow-retro-lg sepia-[.2]"
         />
         <Section title="The problem">{problem}</Section>
         <Section title="What I built">{solution}</Section>
         <Section title="Outcome">{outcome}</Section>
         {images?.length > 0 && (
-          <div className="grid gap-4 mb-8">
+          <div className="mb-8 grid gap-4">
             {images.map((img) => (
-              <img key={img} src={img} alt="" className="rounded-lg shadow-md w-full" />
+              <img key={img} src={img} alt="" className="mx-auto block max-h-[32rem] w-auto max-w-full rounded-xl border-[3px] border-ink shadow-retro" />
             ))}
           </div>
         )}
         {!problem && !solution && !outcome && (
-          <p className="text-neutral-500 italic mb-8">Case study coming soon.</p>
+          <p className="mb-8 italic text-brick">Case study coming soon.</p>
         )}
         <div className="flex gap-3">
           {website && (
-            <a href={website} target="_blank" rel="noopener noreferrer" className={`${linkBase} bg-teal-500`}>
+            <a href={website} target="_blank" rel="noopener noreferrer" className="retro-btn bg-tangerine">
               View Live
             </a>
           )}
           {code && (
-            <a href={code} target="_blank" rel="noopener noreferrer" className={`${linkBase} bg-amber-300`}>
+            <a href={code} target="_blank" rel="noopener noreferrer" className="retro-btn bg-mustard">
               Code
             </a>
           )}
